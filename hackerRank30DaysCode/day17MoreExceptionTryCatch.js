@@ -1,3 +1,5 @@
+// import console = require("console");
+
 // Task
 // Write a Calculator class with a single method: 
 // int power(int,int). The power method takes two integers, 
@@ -13,11 +15,12 @@ class Calculator {
     //     this.pow = pow
     // }
     // methods
-     power(n,p){
+    static power(n,p){
         try{
             if (n < 0) throw "n and p should be non-negative"
             if (p < 0) throw "n and p should be non-negative"
             // if ( p === 0 && n > 0) throw 1
+            console.log(Math.pow(n, p));
             return Math.pow(n, p);
             
         } catch( error){
@@ -25,6 +28,7 @@ class Calculator {
             // console.log("n and p should be non-negative")
             return error
         }
-
      }
 }
+// calculator1 = new Calculator
+Calculator.power(3,2)

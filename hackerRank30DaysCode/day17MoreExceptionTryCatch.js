@@ -30,5 +30,5 @@ class Calculator {
         }
      }
 }
-// calculator1 = new Calculator
+
 Calculator.power(3,2)

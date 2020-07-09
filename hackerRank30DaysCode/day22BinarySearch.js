@@ -24,5 +24,4 @@ function height(root, maxHeight = -1) {
     return maxHeight;
     }
 }
-
 return height(root);

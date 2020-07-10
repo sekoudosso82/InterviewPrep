@@ -1,3 +1,4 @@
+
 // Task
 // A Node class is provided for you in the editor. 
 // A Node object has an integer data field, data, 
@@ -77,7 +78,7 @@ this.display=function(head){
             start=start.next;
         }
 };
-}
+
 function main(){
 var T=parseInt(readLine());
 var head=null;

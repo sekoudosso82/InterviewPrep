@@ -44,4 +44,5 @@ function mergeSortAndCount(arr, left, right) {
     }
 
     return inversions;
+    
 }

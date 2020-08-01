@@ -60,3 +60,36 @@ function sherlockAndAnagrams(s) {
 sherlockAndAnagrams('abba')
 sherlockAndAnagrams('abcd')
 // to run control+option+N
+
+
+// second code
+function sherlockAndAnagrams(s) {
+    let arr = []
+    for (let i = 0 ; i < s.length ; i++){
+        arr.push(s[i])
+        let temp = s[i]
+        for (let j = i+1 ; j < s.length ; j++){
+            temp += s[j]
+            arr.push(temp)
+        }
+    }
+
+    for (let k = 0 ; k < arr.length ; k++){
+            arr[k] = arr[k].split('')
+            .sort((a, b) => a.toLowerCase().localeCompare(b))
+            .join('');
+    }
+
+    let ob = {}
+    let count = 0
+    for (let k = 0 ; k < arr.length ; k++){
+            if (ob[arr[k]] === undefined){
+                ob[arr[k]] = 1
+            }
+            else {
+                count += ob[arr[k]]
+                ob[arr[k]] += 1
+            }
+    }
+    return count
+}

@@ -74,3 +74,38 @@ FROM human_resources.employees JOIN human_resources.department
 	ON employees.department_id = department.department_id
 WHERE department.bulding = 'South'
 ;
+
+// create index 
+CREATE INDEX department_department_id_idx
+    ON human_resources.department USING btree
+    (department_id ASC NULLS LAST)
+;
+
+// add index to employe table
+
+CREATE INDEX employees_employee_id_idx
+    ON human_resources.employees USING btree
+    (employee_id ASC NULLS LAST)
+;
+
+// add default value to a column
+
+ALTER TABLE manufacturing.products
+    ALTER COLUMN category_id SET DEFAULT 4;
+
+// add constrain
+ALTER TABLE manufacturing.categories
+    ADD CONSTRAINT cxategories_market_check CHECK (market = 'domestic' OR market = 'industrial');
+
+// add index to employee last_name column 
+CREATE INDEX employees_last_name_id_idx
+    ON human_resources.employees USING btree
+    (first_name ASC NULLS LAST)
+;
+
+// add constrain to employee hire_date
+
+ALTER TABLE human_resources.employees
+    ADD CONSTRAINT employee_hire_date 
+	CHECK (hire_date > '2020-01-01')
+    NOT VALID;

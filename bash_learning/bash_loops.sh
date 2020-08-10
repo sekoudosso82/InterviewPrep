@@ -1,5 +1,11 @@
 
 
+
+
+# What's Bash ?
+# Bourne Again Shell is a popular interactive command line interpreter.
+# Bash has been created by Thompson Shell(first UNIX shell) in 1971.
+
 # Learning command line tools for managing 
 # the file system in Bash or alternative shells 
 # like, Zsh, can give you more speed and 
@@ -7,15 +13,11 @@
 # low down of a top 10 to use — or to try 
 # for the first time.
 
-# What's Bash ?
-# Bourne Again Shell is a popular interactive command line interpreter.
-# Bash has been created by Thompson Shell(first UNIX shell) in 1971.
-
 # Common Bash commands
 # clear => clear the screen
 # ls => (ls; ls -l; ls tree ...) Lists the folder and file names in the current working directory.
 # cd => Change directory
-    # (cd tree) changes directory to tree
+#     (cd tree) changes directory to tree
 
 # mkdir => Make new directory 
 #     (mkdir people) Make new directory people
@@ -92,10 +94,10 @@ elif [ $b -eq 4 ]; then
 fi 
 # while loop 
 # while loop syntax 
-    # while expression; do 
-    #     echo 
-    #     increase counter
-    # done
+#     while expression; do 
+#         echo 
+#         increase counter
+#     done
 declare -i i=1 
 while [ $i -le 10 ]; do
     echo i:$i
@@ -104,10 +106,10 @@ done
 
 # until loop 
 # until loop syntax 
-    # until expression; do 
-    #     echo 
-    #     increase counter
-    # done
+#     until expression; do 
+#         echo 
+#         increase counter
+#     done
 declare -i j=0 
 until [ $j -le 10 ]; do
     echo i:$j
@@ -186,3 +188,40 @@ function numberthings {
 #numberthings $(ls)
 numberthings scott Sekou Ben Jack
 
+# array syntax
+# declare -a a=()
+declare -a bbb
+bbb=("apple" "banana" "cherry")
+echo " array elements"
+declare -i i=0
+for ((i=0; i<${#bbb[@]}; i++ )) 
+do
+    echo ${bbb[$i]}
+done
+echo " array element at position 2"
+echo ${bbb[2]}
+bbb+=("mango") # add  at the end of the array
+echo " array element at position 3"
+echo ${bbb[3]}
+
+echo " array all elements "
+echo ${bbb[@]} # print all elemeng in the array
+
+bbb+="mango" # without () add to the first element of the array
+echo " array element at position 0"
+echo ${bbb[@]}
+
+bbb[4]="kiwi"
+echo " array element at position 4"
+echo ${bbb[@]}
+
+bbb[8]="Monday"
+echo " array elements"
+echo ${bbb[@]}
+
+bbb[10]="Friday"
+echo " array elements"
+echo ${bbb[@]}
+
+echo " array length"
+echo ${#bbb[@]}

@@ -1,8 +1,14 @@
+# 1.
+# Write a bash script which does just one thing: saying "HELLO".
+    echo HELLO
+
+# 2.
 # Write a Bash script which accepts name as input 
 # and displays a greeting: "Welcome (name)"
 read name
     echo Welcome $name
 
+# 3.
 # Your task is to use for loops to display 
 # only odd natural numbers from 1 to 99.
 for i in {1..99..2} 
@@ -10,12 +16,14 @@ do
     echo $i
 done
 
+# 4.
 # Use a for loop to display the natural numbers from 1 to 50.
 for i in {1..50} 
 do
     echo $i
 done
 
+# 5.
 # Given two integers, X and Y, find their 
 #     sum, difference, product, and quotient.
 
@@ -33,6 +41,7 @@ mult=$(($firsti*$secondi))
 div=$(($firsti/$secondi))
     echo $div
 
+# 6.
 # Given two integers, X and Y, identify whether X < Y or X > Y or X = Y.
 # Exactly one of the following lines:
 #     - X is less than Y
@@ -50,6 +59,7 @@ else [ $firsti -lt $secondi ]
     echo X is less than Y 
 fi
 
+# 7.
 # Read in one character from STDIN.
 # If the character is 'Y' or 'y' display "YES".
 # If the character is 'N' or 'n' display "NO".
@@ -58,9 +68,11 @@ fi
 read char
 case $char in
     Y|y)echo "YES";;
-    N|n)echo "NO";; 
+    N|n)echo "NO";;
+    *) echo ;; 
 esac
 
+# 8.
 # given three integers (X, Y, and Z) representing the three sides 
 # of a triangle, identify whether the triangle is scalene, isosceles, 
 # or equilateral.
@@ -91,6 +103,7 @@ else
     echo SCALENE
 fi
 
+# 9.
 # A mathematical expression containing +,-,*,^, / and parenthesis 
 # will be provided. Read in the expression, then evaluate it. 
 # Display the result rounded to 3 decimal places.
@@ -104,12 +117,12 @@ fi
 
 read line 
 NO_WHITESPACE="$(echo -e "${line}" | tr -d '[:space:]')"
-# result=$(echo "scale=3; $NO_WHITESPACE" | bc )
 result=$(echo "$NO_WHITESPACE" | bc -l )
 result_rounded=`printf "%.3f" $result`
 
 echo $result_rounded
 
+# 10.
 # Given N integers, compute their average, rounded to three decimal places.
 
 # Input Format

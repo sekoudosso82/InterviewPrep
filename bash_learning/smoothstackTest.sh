@@ -425,3 +425,22 @@ grep -w -i 'the'
 # or
 
 egrep -iwv 'that'
+
+# Given a text file, which will be piped to your command through STDIN, 
+# use grep to display all those lines which contain any of the following words in them:
+# the or that or then or those
+
+# The search should not be sensitive to case. Display only those lines 
+# of an input file, which contain the required words.
+
+# Input Format: A text file with multiple lines will be piped to your 
+# command through STDIN.
+
+# Output Format: Display the required lines without any changes to 
+# their relative ordering. 
+
+# grep -iw 'that\|the\|then\|those'
+# or
+# grep -iw -e "the" -e "that" -e "then" -e "those"
+# or
+grep -iw -E "the|that|then|those"

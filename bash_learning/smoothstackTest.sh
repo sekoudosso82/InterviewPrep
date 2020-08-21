@@ -523,3 +523,68 @@ Output Format: Highlight all occurrences of 'thy' as shown in the example below.
 # sed -e 's/thy/{thy}/g' -e 's/Thy/{Thy}/g'
 # sed -e 's/[tT]hy/{&}/g'
 sed 's:thy:{&}:ig'
+
+Task
+
+Given n lines of credit card numbers, mask the first 12 digits of each 
+credit card number with an asterisk (i.e., *) and print the masked card 
+number on a new line. Each credit card number consists of four 
+space-separated groups of four digits. For example, the credit 
+card number 1234 5678 9101 1234 would be masked and printed 
+as **** **** **** 1234.
+
+Input Format: Each line contains a credit card number in the 
+form dddd dddd dddd dddd, where d denotes a decimal digit (i.e., 0 through 9). 
+There are a total of n lines of credit card numbers. 
+
+Output Format: For each credit card number, print its masked version on a new line.
+
+Sample Input
+1234 5678 9101 1234  
+2999 5178 9101 2234  
+9999 5628 9201 1232  
+8888 3678 9101 1232  
+
+Sample Outpu
+**** **** **** 1234
+**** **** **** 2234
+**** **** **** 1232
+**** **** **** 1232
+
+
+sed 's/[0-9][0-9][0-9][0-9] /**** /g'   #my solution
+# sed 's/[0-9]\+ /**** /g'
+# sed -r 's/[0-9]{4} /**** /g'
+# awk '{print "****","****","****",$4}'
+
+
+# Task: Given an input file, with N credit card numbers, each in a 
+# new line, your task is to reverse the ordering of segments in each 
+# credit card number. Assume that the credit card numbers will have 4 
+# space separated segments with 4 digits each.
+
+# If the original credit card number is 1434 5678 9101 1234, 
+# transform it to 1234 9101 5678 1434. 
+
+# Input Format: N credit card numbers, each in a new line, credit card numbers will have 4 space separated segments with 4 digits each. 
+
+# Output Format: N lines, each containing a credit card number with the ordering of its segments reversed.
+
+# Sample Input
+# 1234 5678 9101 1234  
+# 2999 5178 9101 2234  
+# 9999 5628 9201 1232  
+# 8888 3678 9101 1232
+
+# Sample Output
+# 1234 9101 5678 1234  
+# 2234 9101 5178 2999  
+# 1232 9201 5628 9999  
+# 1232 9101 3678 8888 
+
+# sed 's/\([[:digit:]]\{4\}\) \([[:digit:]]\{4\}\) \([[:digit:]]\{4\}\) \([[:digit:]]\{4\}\)/\4 \3 \2 \1/'
+sed -r 's/(.... )(.... )(.... )(....)/\4 \3\2\1/'
+# sed -r 's/(.+ )(.+ )(.+ )(....)/\4 \3\2\1/'
+# sed 's/\([[:digit:]]\{4\}\) \([[:digit:]]\{4\}\) \([[:digit:]]\{4\}\) \([[:digit:]]\{4\}\)/\4 \3 \2 \1/'
+
+# awk '{print $4" "$3" "$2" "$1}'

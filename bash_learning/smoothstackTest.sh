@@ -489,3 +489,37 @@ grep -iw -E "the|that|then|those"
 
 # or
 grep  '\(\d\)\s*\1'
+
+# Task: For each line in a given input file, transform the first 
+# occurrence of the word 'the' with 'this'. The search and transformation 
+# should be strictly case sensitive.
+
+# Input Format: A text file will be piped into your command through STDIN.
+
+# Output Format: Transform the text as specified by the task. 
+
+# sed 's/ the / this /'
+# # sed -e 's/\<the\>/this/'
+# # sed 's/\<the\>/this/'
+# # sed 's/the /this /'
+
+
+# For each line in a given input file, transform all the occurrences of the word 'thy' with 'your'. The search should be case insensitive, i.e. 'thy', 'Thy', 'tHy' etc. should be transformed to 'your'.
+# Input Format: A text file will be piped into your command via STDIN.
+
+# Output Format: Transform and display the text as required in the task. 
+# sed 's/thy/your/ig'
+# sed 's/\bthy\b/your/Ig'
+# sed 's/\<thy\>/your/ig'
+# sed 's/[tT][hH][yY]/your/g'
+
+
+Task
+Given an input file, in each line, highlight all the occurrences of 'thy' by wrapping them up in brace brackets. The search should be case-insensitive.
+
+Input Format: A text file will be piped to your command via STDIN.
+Output Format: Highlight all occurrences of 'thy' as shown in the example below. 
+
+# sed -e 's/thy/{thy}/g' -e 's/Thy/{Thy}/g'
+# sed -e 's/[tT]hy/{&}/g'
+sed 's:thy:{&}:ig'

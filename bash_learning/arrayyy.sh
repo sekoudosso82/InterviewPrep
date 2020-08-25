@@ -238,9 +238,9 @@ cat | tail -20
 cat | head -20
 
 # Head of a Text File #2
-Display the first 20 characters of an input file.
+# Display the first 20 characters of an input file.
 
-Input Format: A text file. 
+# Input Format: A text file. 
 
 at | head -c 20
 

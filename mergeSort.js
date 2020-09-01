@@ -1,7 +1,7 @@
 
 // # Implement a merge sort with recursion
 
-// items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
+// let items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
 
 function mergesort(dataset){
     
@@ -48,6 +48,13 @@ function mergesort(dataset){
 }
 
 // # test the merge sort with data
+let items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
+
 console.log(items)
 mergesort(items)
 console.log(items)
+
+let test2=[10, 5, 2, 7, 4, 9, 12, 1, 8, 6, 11, 3]
+console.log(test2)
+mergesort(test2)
+console.log(test2)

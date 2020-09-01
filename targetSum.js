@@ -22,8 +22,10 @@ function hasTargetSum(arr, num){
             arrayToReturn.push(subArr)
         }   
     }
+    console.log(arrayToReturn)
     return arrayToReturn
 }
+hasTargetSum([-1, 3, 8, 12, 4, 11, 7], 10)
 
 // function hasTargetSum(arr, num){
 //     let arrayToReturn = [] // array to return that content any possible pairs

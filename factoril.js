@@ -2,18 +2,13 @@
 // an integer, n . It must return the value of n! (i.e., n factorial).
 
 function factorial ( n ) {
-    let result = 0
     if (n === 0) { 
-        result += 1
-        return result
+        return 1
     }
     else {
-       result +=  n * factorial(n-1)
-   
+       return   n * factorial(n-1)
     }
-
-    return result
 } 
 
 // with recursion
-console.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(10));
+console.log(factorial(4));

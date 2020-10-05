@@ -1,95 +1,70 @@
-Shortest Path
+// Shortest Path
 
-Understand 
-First example case
-Create second example case
-Constraints
-Diagram 
-Code
+// Understand 
+// First example case
+// Create second example case
+// Constraints
+// Diagram 
+// Code
 
 
-Link to try Shortest Path problem!
+// Link to try Shortest Path problem!
 
-To Try: a similar matrix related problem - link
+// To Try: a similar matrix related problem - link
 
-Prompt: Find length of shortest path in a matrix from top left corner to bottom right corner
+// Prompt: Find length of shortest path in a matrix from top left corner to bottom right corner
 
-1s - walls
-0s - empty spaces; can travel 
+// 1s - walls
+// 0s - empty spaces; can travel 
 
-Input: 
+// Input: 
 
-[[0, 0, 0, 0, 0], 
- [0, 1, 1, 1, 0], 
- [0, 1, 0, 0, 0],
- [0, 0, 0, 1, 0]];
+// [[0, 0, 0, 0, 0], 
+//  [0, 1, 1, 1, 0], 
+//  [0, 1, 0, 0, 0],
+//  [0, 0, 0, 1, 0]];
  
-Output: 8
+// Output: 8
  
-Input: 
-[[0, 0],
- [1, 0]]
+// Input: 
+// [[0, 0],
+//  [1, 0]]
  
-Output: 3
+// Output: 3
  
-Time: O(N)
-Space: O(N)
+// Time: O(N)
+// Space: O(N)
  
-[[1, 2, 3, 4, 5], 
- [2, 3, 4, 5, 0], 
- [3, 4, 5, 0, 0],
- [4, 5, 0, 0, 0]];
+// [[1, 2, 3, 4, 5], 
+//  [2, 3, 4, 5, 0], 
+//  [3, 4, 5, 0, 0],
+//  [4, 5, 0, 0, 0]];
  
+// x -> 
+// [[1, 1],
+//  [1, 0]]
+// y
+// |
+// v
  
+// Queue ([x,y,path])
+// -------------------------------------------------------
+// [1, 0, [[0, 0], [1, 0]]]
+// -------------------------------------------------------
+//            x,y,distance
+// [x,y,distance] = [1,1,3]
  
+// right => [2,0,3]
+// down  => [1,1,3]
+// left  => [0,0,3]
+// up    => [1,-1,3]
  
+// Destination => bottom right corner => when x reaches width-1; when y reaches height-1
  
- 
- 
-x -> 
-[[1, 1],
- [1, 0]]
-y
-|
-v
- 
-Queue ([x,y,path])
--------------------------------------------------------
-[1, 0, [[0, 0], [1, 0]]]
--------------------------------------------------------
-           x,y,distance
-[x,y,distance] = [1,1,3]
- 
-right => [2,0,3]
-down  => [1,1,3]
-left  => [0,0,3]
-up    => [1,-1,3]
- 
-Destination => bottom right corner => when x reaches width-1; when y reaches height-1
- 
-[[1, 2, 3, 4, 5], 
- [2, 1, 1, 1, 6], 
- [3, 1, 7, 8, 7],
- [4, 5, 6, 1, 8]];
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+// [[1, 2, 3, 4, 5], 
+//  [2, 1, 1, 1, 6], 
+//  [3, 1, 7, 8, 7],
+//  [4, 5, 6, 1, 8]];
  
 function shortestPath(matrix) {
     const queue = [];

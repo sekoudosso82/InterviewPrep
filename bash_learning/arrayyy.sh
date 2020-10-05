@@ -4,9 +4,11 @@
 # into an array and then display the entire array, with a space between 
 # each of the countries' names.
 
-# Input Format: A list of country names. The only characters present in the country names will be upper or lower case characters and hyphens.
+# Input Format: A list of country names. The only characters present in 
+# the country names will be upper or lower case characters and hyphens.
 
-# Output Format: Display the entire array of country names, with a space between each of them.
+# Output Format: Display the entire array of country names, with a 
+# space between each of them.
 
 declare -i index=0
 declare -a arr
@@ -242,7 +244,7 @@ cat | head -20
 
 # Input Format: A text file. 
 
-at | head -c 20
+cat | head -c 20
 
 # Middle of a Text File
 # Display the lines (from line number 12 to 22, both inclusive) of a given text file.

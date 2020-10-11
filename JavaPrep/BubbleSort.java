@@ -23,3 +23,15 @@ public class BubbleSort {
     }  
   }  
   }  
+
+//   Printing Sorted List . . . 
+// 7
+// 9
+// 10
+// 12
+// 23
+// 34
+// 34
+// 44
+// 78 
+// 101 

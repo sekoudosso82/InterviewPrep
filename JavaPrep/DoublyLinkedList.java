@@ -100,3 +100,8 @@ public class DoublyLinkedList {
 // 1 2 3 4 5 
 // Count of nodes present in the list: 5
 
+// given an array move all zero(0) to the end 
+// and keep other element order
+// example :
+// input [1, 0, 2, 0, 4, 9]
+// output [1, 2, 4, 9, 0, 0]

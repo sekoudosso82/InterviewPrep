@@ -2,7 +2,7 @@
 
 // Consider the following program.
 
-    public class MinMax {  
+    public class MinMaxCircularLinkedList {  
         //Represents the node of list.  
         public class Node{  
             int data;  

@@ -48,3 +48,17 @@ addTwoNumOfEqualDigitSum(b)
 let c=[51, 32, 43]
 addTwoNumOfEqualDigitSum(c)
 
+// Ruby
+// def solution(a)
+//   # write your code in Ruby 2.2
+//   # A = [1, 3, 6, 4, 1, 2]
+//   # sort A 
+//   sort_array = a.sort 
+//   #iterate over A and return the first positive integer thast is not present in A
+//   for i in 1..(sort_array.length+1) do  
+//             if !sort_array.include? i 
+//                 return i
+//             end
+//   end
+  
+// end

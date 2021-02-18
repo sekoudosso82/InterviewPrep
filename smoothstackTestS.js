@@ -6,10 +6,11 @@ function solution(A) {
             result = result + 1;
     }
     let max = 0 
+    let r = 0;
     for (let i = 0; i < n; i++) {
         let aCopy = A
-        aCopy[i]=1-acopy[i]
-        let r = 0;
+        // let r = 0;
+        aCopy[i]=1-aCopy[i]
         for (let j = 0; j < n ; j++) {
             if (aCopy[j] == aCopy[j + 1]){
                 r = r + 1;
@@ -22,4 +23,4 @@ function solution(A) {
     return Math.max(r, result);
 }
 // r = Math.max(r, count);
-solution([1,1,0,1,0,0])
+console.log( (solution([1,1,0,1,0,0])) )

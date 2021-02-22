@@ -281,3 +281,15 @@ React components.
     PureComponent will do a shallow comparison on both props and state. 
     . Component on the other hand won''t compare current props and state 
     to next out of the box.  
+
+
+// WEBPACK CONFIGURATION FOR REACT  
+    webpack is a tool that lets you bundle your JavaScript 
+    applications (supporting both ESM and CommonJS), and it 
+    can be extended to support many different assets such as 
+    images, fonts, and stylesheets.
+
+    Webpack is a static module bundler for modern JavaScript 
+    applications. When webpack processes your application, 
+    it internally builds a dependency graph that maps every 
+    module your project needs and generates one or more bundles.  

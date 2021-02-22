@@ -224,9 +224,9 @@ React components.
     mixins are unnecessary and problematic in React codebase
 
 
-    // How to use React label element? 
+// How to use React label element? 
 
-    // higher-order function, that is, a function that takes a function 
+// higher-order function, that is, a function that takes a function 
     // as an argument and returns a function.  
     // React.Component vs React.PureComponent
         React.PureComponent is similar to React.Component. The 
@@ -282,6 +282,11 @@ React components.
     . Component on the other hand won''t compare current props and state 
     to next out of the box.  
 
+// difference between state and props in react js  
+    "props" (short for "properties") is an object of arbitrary 
+    inputs a React function component accepts as the first argument. 
+    "state" is data that changes over the lifetime of a specific 
+    instance of a React component. 
 
 // WEBPACK CONFIGURATION FOR REACT  
     webpack is a tool that lets you bundle your JavaScript 
@@ -293,3 +298,86 @@ React components.
     applications. When webpack processes your application, 
     it internally builds a dependency graph that maps every 
     module your project needs and generates one or more bundles.  
+
+// stateless component 
+
+// KEYS within object collection of react.js component?  
+    A “key” is a special string attribute you need to include when 
+    creating lists of elements in React. Keys are used to React to 
+    identify which items in the list are changed, updated, or deleted.  
+    Keys should be given to the elements inside the array to give the 
+    elements a stable identity. When the state of your component changes, 
+    the render function will return a new tree of React elements, 
+    different to the previous/current one.  
+
+// What Are PropTypes In React
+     PropTypes are a mechanism to ensure 
+    that components use the correct data type and pass the right 
+    data, and that components use the right type of props, and 
+    that receiving components receive the right type of props. 
+    // Validating prop types
+        ComponentExample.propTypes = {
+            arrayProp: PropTypes.array,
+            stringProp: PropTypes.string,
+            numberProp: PropTypes.number,
+            boolProp: PropTypes.bool,
+        }
+
+// when to call hooks in React?
+    Don''t call Hooks inside loops, conditions, or nested functions. 
+    Instead, always use Hooks at the top level of your React function. 
+    By following this rule, you ensure that Hooks are called in the 
+    same order each time a component renders. 
+
+// what are different categorie of XSS attack? 
+    XSS attacks can be put into three categories: 
+        stored (also called persistent), 
+        reflected (also called non-persistent), or 
+        DOM-based. 
+    The injected script is stored permanently on the target servers. 
+    The victim then retrieves this malicious script from the server 
+    // when the browser sends a request for data 
+
+// How to Use Object Destructuring in JavaScript
+    The object destructuring is a useful JavaScript feature to extract 
+    properties from objects and bind them to variables.  
+    // Syntax 
+        const { identifier } = expression;
+    const hero = {
+        name: 'Batman',
+        realName: 'Bruce Wayne'
+      };
+      
+      const { name, realName } = hero;
+      name;     // => 'Batman',
+      realName; // => 'Bruce Wayne'  
+
+//   what are valid use of react ref?  
+    Refs are a function provided by React to access the DOM element 
+    and the React element that you might have created on your own. 
+    They are used in cases where we want to change the value of a 
+    child component, without making use of props and all. 
+
+// when to use webpack-watch?  
+    Usually when you run Webpack in development, you want to run it 
+    in watch mode. This configures Webpack to watch files in your 
+    project forchanges, and recompile whenever a file changes. 
+    In other words, you don''t have to manually re-run Webpack 
+    every time. 
+
+// what is render props in react?
+    The term “render prop” refers to a technique forsharing code 
+    between React components using a prop whose value is a function. 
+    A component with a render prop takes a function that returns a 
+    React element and calls it instead of implementing its own 
+    render logic. 
+
+    // Arrow function 
+    These are anonymous functions with their own special syntax that 
+    accept a fixed number of arguments, and operate in the context 
+    of their enclosing scope - ie the function or other code where 
+    they are defined. 
+    An arrow function expression is a compact alternative to a 
+    traditional function expression, but is limited and can''t 
+    be used in all situations. 
+

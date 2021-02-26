@@ -61,6 +61,16 @@ In a controlled component, form data is handled by a React component.
 // What are uncontrolled components? 
 uncontrolled components, where form data is handled by the DOM itself.
 
+// Controlled component vs uncontrolled component  
+    In a controlled component, form data is handled by a React component. 
+    The alternative is uncontrolled components, where form data is handled 
+    by the DOM itself. To write an uncontrolled component, instead of 
+    writing an event handler for every state update, you can use a ref 
+    to get form values from the DOM.  
+    most cases, we recommend using controlled components to implement 
+    forms. In a controlled component, form data is handled by a React  
+
+
 // What is Lifting State Up in React?
 In React, sharing state is accomplished by moving it up to the closest 
 common ancestor of the components that need it. This is called “lifting 
@@ -358,6 +368,11 @@ React components.
     They are used in cases where we want to change the value of a 
     child component, without making use of props and all. 
 
+    // Following are the cases when refs should be used:
+        When you need to manage focus, select text or media playback
+        To trigger imperative animations
+        Integrate with third-party DOM libraries 
+
 // when to use webpack-watch?  
     Usually when you run Webpack in development, you want to run it 
     in watch mode. This configures Webpack to watch files in your 
@@ -372,7 +387,13 @@ React components.
     React element and calls it instead of implementing its own 
     render logic. 
 
-    // Arrow function 
+// Arrow function 
+    Arrow functions allow to bind the context of the components 
+    properly since in ES6 auto binding is not available by default.
+
+    Arrow functions are mostly useful while working with the 
+    higher order functions.  
+
     These are anonymous functions with their own special syntax that 
     accept a fixed number of arguments, and operate in the context 
     of their enclosing scope - ie the function or other code where 
@@ -380,4 +401,68 @@ React components.
     An arrow function expression is a compact alternative to a 
     traditional function expression, but is limited and can''t 
     be used in all situations. 
+
+// React, writing UI test cases
+    Stateful                                Component 
+    Stateless                               Component 
+    Controlled                              Component 
+    UnControlled                            component 
+    Higher Order (pure component)           Component 
+    pure component                          Component 
+    React                                   Component
+
+// 3 phases of component lifecycle 
+    initial rendering --- updating  --- unmounting  
+
+// lifecycle methods of React component 
+
+componentWillMountg() componentDidMount() componentWillReceiveProps() 
+
+ShouldComponentUpdate() componentWillUpdate() componentDidUpdate()  
+
+componentWillUnmountg()
+
+// REDUX 
+// What are the three principles that Redux follows? 
+    Single source of truth
+    tate is read-only
+    Changes are made with pure functions
+
+// List down the components of Redux.  
+    Action – It’s an object that describes what happened.
+    Reducer –  It is a place to determine how the state will change.
+    Store – State/ Object tree of the entire application is saved in the Store.
+    View – Simply displays the data provided by the Store.  
+
+// What are the advantages of Redux?  
+    Predictability of outcome
+    Maintainability – The code becomes easier to maintain with a predictable outcome and strict structure.
+    Server-side rendering 
+    Developer tools 
+    Community and ecosystem 
+    Ease of testing 
+    Organization 
+
+// React Router
+
+// What is React Router? 
+    React Router is the standard routing library forReact 
+    React Router keeps your UI in sync with the URL. 
+    It has a simple API with powerful features like lazy code loading, 
+    dynamic route matching, and location transition handling built right in
+
+// Why is switch keyword used in React Router v4? 
+    The "switch" keyword is used when you want to display only a single 
+    route to be rendered amongst the several defined routes. 
+    The "<switch> </switch>" tag when in use matches the typed URL with 
+    the defined routes in sequential order. When the first match is found, 
+    it renders the specified route. Thereby bypassing the remaining routes. 
+
+// Why do we need a Router in React?
+    A Router is used to define multiple routes and when a user types a 
+    specific URL, if this URL matches the path of any ‘route’ defined 
+    inside the router, then the user is redirected to that particular 
+    route. So basically, we need to add a Router library to our app 
+    that allows creating multiple routes with each leading to us a 
+    unique view.  
 

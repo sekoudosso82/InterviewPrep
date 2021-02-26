@@ -11,4 +11,7 @@ function factorial ( n ) {
 } 
 
 // with recursion
-console.log(factorial(4));
+console.log(factorial(4));       // 24
+console.log(factorial(0))        // 1
+console.log(factorial(1))        // 1
+console.log(factorial(6))        // 720

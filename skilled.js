@@ -1,30 +1,22 @@
-// lengthF = [10,20, 30, 40, 45]
-// lengthFf = [50,20, 30, 40, 50]
-// tim = 100
-// let arr = [45,20, 30, 40, 45]
-function s(arr, tim){
-    // copy arr elements into the empty object
-    var ob = {}
-    for (let i = 0 ; i < arr.length ; i++){
-        ob[arr[i]] = arr[i]}
-        console.log(ob)
-    for (let i = 0 ; i < arr.length ; i++){
-        var diff = tim - arr[i]
-        console.log('************    diff    **************',diff)
-        // if ( ob[diff] !== undefined && ob[diff] !== Object.keys(ob)[i]){
-            // check if ob contain diff and if the index are different
-        if ( ob[diff] !== undefined && i !== Object.keys(ob).indexOf(`${diff}`)){
-            // console.log('**************i    *********', i)
-            // console.log('************** ob[diff]    *********', ob[diff])
-            // console.log('**************Object.keys(ob).indexOf[diff]    *********', Object.keys(ob).indexOf(`${diff}`))
-            console.log("true") 
-            return true
-        }  
-        // ob[diff] =  diff
+function test(arr1, arr2) {
+    // Students = [“a”, ”c”, ”d”, ”e”, ”f”, ”g”, ”h”, ”i”]
+    // Marks = [90,100,80,70,60,50,80,40]
+
+    // create sub arrays of two element as obj of key pair 
+    merge1 = []
+    for (let i =0; i < arr1.length; i++){
+        templateArr = []
+        templateArr.push(arr1[i])
+        templateArr.push(arr2[i])
+        merge1.push(templateArr)
     }
-    console.log("false")
-    return false
-    
+    // merge1 = [["a", 90],["b", 100], ... ]
+    // sort 
+    merge1.sort(function(x, y) {return (x[1] - y[1]) }  )
+    // select the first 3 sub-array
+    result = merge1.sclice(0,3)
+    return result
 }
-let arrayS = [45, 20, 30, 40, 45]
-s(arrayS, 100)
+Students = [“a”, ”c”, ”d”, ”e”, ”f”, ”g”, ”h”, ”i”]
+Marks = [90,100,80,70,60,50,80,40]
+console.log(test(Students, Marks))

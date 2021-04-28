@@ -4,7 +4,7 @@ function monaie(coins, money){
 
 function possibleMonaie(coins, money, index){
     if (money === 0){
-        // console.log("Recu number of ways: ", 1)
+        // console.log(" Number of ways: ", 1)
         return 1;
     }
     if((index > coins.length)||(index===coins.length)){

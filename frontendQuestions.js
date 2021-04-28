@@ -466,3 +466,5 @@ componentWillUnmountg()
     that allows creating multiple routes with each leading to us a 
     unique view.  
 
+// latest version of react 
+    17.0.1 / 22 October 2020
